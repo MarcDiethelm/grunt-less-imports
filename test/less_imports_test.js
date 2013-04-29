@@ -22,7 +22,7 @@ var grunt = require('grunt');
  test.ifError(value)
  */
 
-exports.create_less_imports = {
+exports.less_imports = {
 	setUp: function(done) {
 		// setup here if necessary
 		done();

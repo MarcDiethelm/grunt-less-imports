@@ -1,6 +1,6 @@
 /*
- * grunt-create-less-imports
- * https://github.com/mdiethelm/grunt-create-less-imports
+ * grunt-less-imports
+ * https://github.com/MarcDiethelm/grunt-less-imports
  *
  * Copyright (c) 2013 Marc Diethelm
  * Licensed under the MIT license.
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 	// Please see the Grunt documentation for more information regarding task
 	// creation: http://gruntjs.com/creating-tasks
 
-	grunt.registerMultiTask('create_less_imports', 'Your task description goes here.', function() {
+	grunt.registerMultiTask('less_imports', 'A grunt task to create @import statements from a collection of stylesheet files.', function() {
 		// Merge task-specific and/or target-specific options with these defaults.
 		var css = '',
 			lessImports = '',

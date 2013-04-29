@@ -1,6 +1,6 @@
 /*
- * grunt-create-less-imports
- * https://github.com/mdiethelm/grunt-create-less-imports
+ * grunt-less-imports
+ * https://github.com/MarcDiethelm/grunt-less-imports
  *
  * Copyright (c) 2013 Marc Diethelm
  * Licensed under the MIT license.
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 		},
 
 		// Configuration to be run (and then tested).
-		create_less_imports: {
+		less_imports: {
 			test_src_dest: {
 				options: {
 				},
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
 
 	// Whenever the "test" task is run, first clean the "tmp" dir, then run this
 	// plugin's task(s), then test the result.
-	grunt.registerTask('test', ['clean', 'create_less_imports', 'nodeunit']);
+	grunt.registerTask('test', ['clean', 'less_imports', 'nodeunit']);
 
 	// By default, lint and run all tests.
 	grunt.registerTask('default', ['jshint', 'test']);

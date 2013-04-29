@@ -30,7 +30,7 @@ One the plugin has been installed, it may be enabled inside your Gruntfile with 
 grunt.loadNpmTasks('grunt-less-imports');
 ```
 
-## The "create_less_imports" task
+## The "less_imports" task
 
 ### Overview
 In your project's Gruntfile, add a section named `less_imports` to the data object passed into `grunt.initConfig()`.
