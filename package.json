@@ -1,7 +1,7 @@
 {
   "name": "grunt-less-imports",
   "description": "A grunt task to create @import statements from a collection of stylesheet files.",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "homepage": "https://github.com/MarcDiethelm/grunt-less-imports",
   "author": {
     "name": "Marc Diethelm",
