@@ -1,7 +1,6 @@
 # grunt-less-imports
 
-> A grunt task to create @import statements from a collection of stylesheet files. If you wish any .css files will be
-read and the contents added before the @import statements.
+> A grunt task to create @import statements from a collection of stylesheet files.
 
 Why use this? To get useful error messages from the LessCSS parser, that tell you what file the error was encountered!
 LessCSS uses @import statements to aggregate files and will tell you about parsing errors in those files.
