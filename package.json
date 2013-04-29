@@ -1,24 +1,24 @@
 {
-  "name": "grunt-create-less-imports",
-  "description": "Create a file with @import statements from a list of files.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/mdiethelm/grunt-create-less-imports",
+  "name": "grunt-less-imports",
+  "description": "A grunt task to create @import statements from a collection of stylesheet files.",
+  "version": "0.8.1",
+  "homepage": "https://github.com/MarcDiethelm/grunt-less-imports",
   "author": {
     "name": "Marc Diethelm",
     "email": "marc@web5.me",
-    "url": "https://github.com/mdiethelm"
+    "url": "https://github.com/MarcDiethelm"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mdiethelm/grunt-create-less-imports.git"
+    "url": "git://github.com/MarcDiethelm/grunt-less-imports.git"
   },
   "bugs": {
-    "url": "https://github.com/mdiethelm/grunt-create-less-imports/issues"
+    "url": "https://github.com/MarcDiethelm/grunt-less-imports/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/mdiethelm/grunt-create-less-imports/blob/master/LICENSE-MIT"
+      "url": "https://github.com/MarcDiethelm/grunt-less-imports/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -38,6 +38,10 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "less",
+    "lessCSS",
+    "import",
+    "@import"
   ]
 }
