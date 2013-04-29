@@ -49,6 +49,21 @@ grunt.initConfig({
 ```
 
 ### Options
+By default any .css source files are inlined in the output before the @import statements for the less files start.
+LessCSS itself will generate CSS from .less @import statements, but any .css @imports are left as is. If that's the behavior
+you want, set `inlineCSS` to false. The @imports will be created in order of the provided files.
+
+```js
+grunt.initConfig({
+  less_imports: {
+    options: {
+      inlineCSS: false // default: true
+    },
+    src: [ 'styles/*.css', 'styles/*.less'],
+    dest: 'dist/imports.less'
+  },
+})
+```
 
 ---
 
@@ -80,23 +95,6 @@ grunt.initConfig({
     files: {
       'dist/imports.less': ['styles/styles.css', 'styles/styles.less']
     },
-  },
-})
-```
-
-#### Option
-By default any .css source files are inlined in the output before the @import statements for the less files start.
-LessCSS itself will generate CSS from .less @import statements, but any .css @imports are left as is. If that's the behavior
-you want, set `inlineCSS` to false. The @imports will be created in order of the provided files.
-
-```js
-grunt.initConfig({
-  less_imports: {
-    options: {
-      inlineCSS: false // default: true
-    },
-    src: [ 'styles/*.css', 'styles/*.less'],
-    dest: 'dist/imports.less'
   },
 })
 ```
