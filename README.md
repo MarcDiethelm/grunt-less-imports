@@ -1,8 +1,8 @@
 # grunt-less-imports
 
-> A grunt task to create @import statements from a collection of stylesheet files.
+> A grunt task to create LessCSS @import statements from a collection of stylesheet files.
 
-Why use this? To get useful error messages from the LessCSS parser, that tell you what file the error was encountered!
+Why use this? To get useful error messages from the LessCSS parser, that tell you in what file the error was encountered!
 LessCSS uses @import statements to aggregate files and will tell you about parsing errors in those files.
 But maintaining these statemants by hand is a pain. In order to automatically aggregate all the style files in a project,
 a method of first concatenating the files before parsing is widely used. This works but you loose the valuable
@@ -24,6 +24,8 @@ that process, you may install this plugin with this command:
 npm install grunt-less-imports --save-dev
 ```
 
+`--save-dev` adds the plugin to your devDependencies.
+
 One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
@@ -43,8 +45,8 @@ grunt.initConfig({
     },
     your_target: {
       // Target-specific file lists and/or options go here.
-    },
-  },
+    }
+  }
 })
 ```
 
@@ -61,7 +63,7 @@ grunt.initConfig({
     },
     src: [ 'styles/*.css', 'styles/*.less'],
     dest: 'dist/imports.less'
-  },
+  }
 })
 ```
 
@@ -80,7 +82,7 @@ grunt.initConfig({
     },
     src: [ 'styles/*.css', 'styles/*.less'],
     dest: 'dist/imports.less'
-  },
+  }
 })
 ```
 
@@ -94,8 +96,8 @@ grunt.initConfig({
     },
     files: {
       'dist/imports.less': ['styles/styles.css', 'styles/styles.less']
-    },
-  },
+    }
+  }
 })
 ```
 
