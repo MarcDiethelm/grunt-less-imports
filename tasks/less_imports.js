@@ -24,13 +24,12 @@ module.exports = function(grunt) {
 
 		// Iterate over all specified file groups.
 		this.files.forEach(function(f) {
-			// Concat specified files.
-			var src = f.src.filter(function(filepath) {
+
+			f.src.forEach(function(filepath) {
 				var extension;
 				// Warn on and remove invalid source files (if nonull was set).
 				if (!grunt.file.exists(filepath)) {
 					grunt.log.warn('Source file "' + filepath + '" not found.');
-					return false;
 				} else {
 					extension = filepath.split('.').pop();
 					if (options.inlineCSS === true && extension === 'css') {
@@ -41,7 +40,6 @@ module.exports = function(grunt) {
 						grunt.log.debug(filepath.green + ' @import created'.magenta);
 						lessImports += '@import "' + filepath + '";\n';
 					}
-					return true;
 				}
 			});
 		});
