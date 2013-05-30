@@ -101,6 +101,13 @@ grunt.initConfig({
 })
 ```
 
+## Troubleshooting
+
+	Warning: Arguments to path.join must be strings
+
+Most likely caused by a change in Node 0.10.0. Fixed in Grunt 0.4.1.
+Update grunt and grunt-cli.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed
 functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
