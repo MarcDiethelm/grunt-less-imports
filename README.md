@@ -1,5 +1,7 @@
 # grunt-less-imports
 
+[![Build Status](https://travis-ci.org/MarcDiethelm/grunt-less-imports.png?branch=develop,master)](https://travis-ci.org/MarcDiethelm/grunt-less-imports)
+
 > A grunt task to create LessCSS @import statements from a collection of stylesheet files.
 
 Why use this? To get useful error messages from the LessCSS parser, that tell you in what file the error was encountered!
