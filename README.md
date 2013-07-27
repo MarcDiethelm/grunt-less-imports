@@ -6,7 +6,7 @@
 
 Why use this? To get useful error messages from the LessCSS parser, that tell you in what file the error was encountered!
 LessCSS uses @import statements to aggregate files and will tell you about parsing errors in those files.
-But maintaining these statemants by hand is a pain. In order to automatically aggregate all the style files in a project,
+But maintaining these statements by hand is a pain. In order to automatically aggregate all the style files in a project,
 a method of first concatenating the files before parsing is widely used. This works but you loose the valuable
 information about where to fix your mistakes.
 
