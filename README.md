@@ -28,7 +28,7 @@ npm install grunt-less-imports --save-dev
 
 `--save-dev` adds the plugin to your devDependencies.
 
-One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+Once the plugin has been installed, load it in your `Gruntfile.js` like so:
 
 ```js
 grunt.loadNpmTasks('grunt-less-imports');
