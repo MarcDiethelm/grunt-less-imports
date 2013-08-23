@@ -1,5 +1,7 @@
 # grunt-less-imports
 
+If this tool has helped you, why not make a Bitcoin donation at: 1AZd6QpvysVoaknwVdqsDHvmj7GzTdLXMP
+
 [![Build Status](https://travis-ci.org/MarcDiethelm/grunt-less-imports.png?branch=develop,master)](https://travis-ci.org/MarcDiethelm/grunt-less-imports)
 
 > A grunt task to create LessCSS @import statements from a collection of stylesheet files.
