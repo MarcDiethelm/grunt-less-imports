@@ -14,9 +14,9 @@ module.exports = function(grunt) {
 	// creation: http://gruntjs.com/creating-tasks
 
 	grunt.registerMultiTask('less_imports', 'A grunt task to create @import statements from a collection of stylesheet files.', function() {
-		// Merge task-specific and/or target-specific options with these defaults.
 		var css = '',
 			lessImports = '',
+			// Merge task-specific and/or target-specific options with these defaults.
 			options = this.options({
 				inlineCSS: true
 			})
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
 			f.src.forEach(function(filepath) {
 				var extension;
-				// Warn on and remove invalid source files (if nonull was set).
+				// Warn on and ignore invalid source files (e.g. if nonull was set).
 				if (!grunt.file.exists(filepath)) {
 					grunt.log.warn('Source file "' + filepath + '" not found.');
 				} else {
