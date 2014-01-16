@@ -9,6 +9,7 @@
 'use strict';
 
 module.exports = function(grunt) {
+	var path = require('path');
 
 	// Please see the Grunt documentation for more information regarding task
 	// creation: http://gruntjs.com/creating-tasks
@@ -19,7 +20,10 @@ module.exports = function(grunt) {
 			lessImports = '',
 			options = this.options({
 				inlineCSS: true
-			})
+			}),
+			dest = this.files[0].dest,
+			relRoot = path.dirname(dest),
+			resolved
 		;
 
 		// Iterate over all specified file groups.
@@ -37,15 +41,16 @@ module.exports = function(grunt) {
 						css += grunt.file.read(filepath) + '\n\n';
 					}
 					else {
-						grunt.log.debug(filepath.green + ' @import created'.magenta);
-						lessImports += '@import "' + filepath + '";\n';
+						resolved = path.relative(relRoot, filepath);
+						grunt.log.debug(resolved.green + ' @import created'.magenta);
+						lessImports += '@import "' + resolved + '";\n';
 					}
 				}
 			});
 		});
 
 		// Write the destination file.
-		grunt.file.write(this.files[0].dest, css + lessImports);
+		grunt.file.write(dest, css + lessImports);
 		grunt.log.writeln('File "' + this.files[0].dest.cyan + '" created.');
 	});
 
