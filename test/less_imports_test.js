@@ -53,5 +53,23 @@ exports.less_imports = {
 		test.equal(actual, expected, 'create a correct imports.less with inlineCSS==false.');
 
 		test.done();
+	},
+	test_default_compilation: function(test) {
+		test.expect(1);
+
+		var actual = grunt.file.read('tmp/compiled/test_default.css');
+		var expected = grunt.file.read('test/expected/default/output.css')
+		test.equal(actual, expected, 'compile imports.less to css');
+
+		test.done();
+	},
+	test_inline_css_compilation: function(test) {
+		test.expect(1);
+
+		var actual = grunt.file.read('tmp/compiled/inline_css_false.css');
+		var expected = grunt.file.read('test/expected/inline_css_false/output.css')
+		test.equal(actual, expected, 'compile imports.less to css');
+
+		test.done();
 	}
 };
