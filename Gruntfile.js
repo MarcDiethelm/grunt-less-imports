@@ -12,6 +12,9 @@ module.exports = function (grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
+		// Expose package.json on grunt config
+		package: grunt.file.readJSON('package.json'),
+
 		jshint: {
 			all: [
 				'Gruntfile.js',
@@ -49,6 +52,13 @@ module.exports = function (grunt) {
 				},
 				src: ['test/fixtures/*.css', 'test/fixtures/*.less'],
 				dest: 'tmp/inline_css_false/imports.less'
+			},
+			test_custom_banner: {
+				options: {
+					banner: '// Auto-generated for <%= package.name %>'
+				},
+				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
+				dest: 'tmp/test_custom_banner/imports.less'
 			}
 		},
 

@@ -53,5 +53,14 @@ exports.less_imports = {
 		test.equal(actual, expected, 'create a correct imports.less with inlineCSS==false.');
 
 		test.done();
+	},
+	test_custom_banner: function(test) {
+		test.expect(1);
+
+		var actual = grunt.file.read('tmp/test_custom_banner/imports.less');
+		var expected = grunt.file.read('test/expected/test_custom_banner/imports.less');
+		test.equal(actual, expected, 'create a correct imports.less with a custom banner.');
+
+		test.done();
 	}
 };
