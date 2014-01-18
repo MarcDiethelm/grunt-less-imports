@@ -27,6 +27,8 @@ exports.less_imports = {
 		// setup here if necessary
 		done();
 	},
+
+	// Test generation of imports file
 	test_src_dest: function(test) {
 		test.expect(1);
 
@@ -54,6 +56,17 @@ exports.less_imports = {
 
 		test.done();
 	},
+	test_custom_banner: function(test) {
+		test.expect(1);
+
+		var actual = grunt.file.read('tmp/test_custom_banner/imports.less');
+		var expected = grunt.file.read('test/expected/test_custom_banner/imports.less');
+		test.equal(actual, expected, 'create a correct imports.less with a custom banner.');
+
+		test.done();
+	},
+
+	// Test compilation of generated imports file
 	test_default_compilation: function(test) {
 		test.expect(1);
 
