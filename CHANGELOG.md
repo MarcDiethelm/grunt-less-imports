@@ -1,6 +1,12 @@
+# 0.9.1 – 2014-01-18
+
+- Fix documentation for the banner option.
+- Add advisory about the potentially breaking change in 0.9.0.
+
 # 0.9.0 – 2014-01-18
 
-- Fix: Correctly resolve path from dest to the file to be imported. Importing files outside of project root wasn't working.
+- This release contains a potentially breaking change, see below. Everything is expected to work fine though.
+- Fix: Correctly resolve a relative path from dest to the file to be imported for import statements. Importing files outside of project root wasn't working.
 - Output file now has a customizable banner.
 - More tests.
 
@@ -8,4 +14,4 @@
 
 - Adds this changelog.
 - Add a bitcoin donation address to readme.
-- Fixes some embarassing typos in the readme.
+- Fixes some embarrassing typos in the readme.
