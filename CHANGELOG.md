@@ -1,3 +1,7 @@
+# 1.0.0 – 2014-06-xx
+
+- Dev: Test with Mocha instead of Nodeunit
+
 # 0.9.1 – 2014-01-18
 
 - Fix documentation for the banner option.
