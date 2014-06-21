@@ -55,7 +55,7 @@ module.exports = function (grunt) {
 			},
 			test_custom_banner: {
 				options: {
-					banner: '// Auto-generated for <%= package.name %>'
+					banner: '// Banner for <%= package.name %>'
 				},
 				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
 				dest: 'tmp/test_custom_banner/imports.less'
