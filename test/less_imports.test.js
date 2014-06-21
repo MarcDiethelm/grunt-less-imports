@@ -32,6 +32,11 @@ describe('grunt-less-imports', function() {
 			assert.equal(actual, expected);
 		});
 
+		it('should set import keyword from options', function() {
+			var actual = grunt.file.read('tmp/import_options/imports.less');
+			var expected = grunt.file.read('test/expected/import_options/imports.less');
+			assert.equal(actual, expected);
+		});
 
 	});
 

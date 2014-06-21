@@ -59,6 +59,13 @@ module.exports = function (grunt) {
 				},
 				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
 				dest: 'tmp/test_custom_banner/imports.less'
+			},
+			import_option: {
+				options: {
+					import: 'reference'
+				},
+				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
+				dest: 'tmp/import_options/imports.less'
 			}
 		},
 
