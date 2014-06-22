@@ -7,7 +7,7 @@
 A grunt task to create LessCSS @import statements from a collection of stylesheet files.
 
 ```less
-@import (once) "filename";
+@import (once) "filename"; // <-- these. in a file.
 ```
 
 Why use this? To get useful error messages from the LessCSS parser, that tell you in what file the error was encountered!
