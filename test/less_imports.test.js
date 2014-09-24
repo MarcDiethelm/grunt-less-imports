@@ -20,6 +20,15 @@ describe('grunt-less-imports', function() {
 			assert.equal(actual, expected);
 		});
 
+		it('should create a correct imports.less from a files configuration with multiple entries', function() {
+			var actual1 = grunt.file.read('tmp/test_more_files/deeper.less');
+			var expected1 = grunt.file.read('test/expected/more_files/deeper.less');
+			assert.equal(actual1, expected1);
+			var actual2 = grunt.file.read('tmp/test_more_files/default.less');
+			var expected2 = grunt.file.read('test/expected/more_files/default.less');
+			assert.equal(actual2, expected2);
+		});
+
 		it('should create a correct imports.less with inlineCSS==false', function() {
 			var actual = grunt.file.read('tmp/inline_css_false/imports.less');
 			var expected = grunt.file.read('test/expected/inline_css_false/imports.less');

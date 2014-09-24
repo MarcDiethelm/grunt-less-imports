@@ -46,6 +46,14 @@ module.exports = function (grunt) {
 					'tmp/test_files/imports.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css', 'test/fixtures/deeper/styles.less', 'test/fixtures/deeper/styles.css']
 				}
 			},
+			test_more_files: {
+				options: {
+				},
+				files: {
+					'tmp/test_more_files/default.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css'],
+					'tmp/test_more_files/deeper.less': ['test/fixtures/deeper/styles.less', 'test/fixtures/deeper/styles.css']
+				}
+			},
 			inline_css_false: {
 				options: {
 					inlineCSS: false
