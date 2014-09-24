@@ -36,21 +36,21 @@ module.exports = function (grunt) {
 			test_src_dest: {
 				options: {
 				},
-				src: [ 'test/fixtures/*.less', 'test/fixtures/*.css'], // test using incorrect order, because we handle this
+				src: ['test/fixtures/*.less', 'test/fixtures/*.css', 'test/fixtures/deeper/*.less', 'test/fixtures/deeper/*.css'], // test using incorrect order, because we handle this
 				dest: 'tmp/test_src_dest/imports.less'
 			},
 			test_files: {
 				options: {
 				},
 				files: {
-					'tmp/test_files/imports.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css']
+					'tmp/test_files/imports.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css', 'test/fixtures/deeper/styles.less', 'test/fixtures/deeper/styles.css']
 				}
 			},
 			inline_css_false: {
 				options: {
 					inlineCSS: false
 				},
-				src: ['test/fixtures/*.css', 'test/fixtures/*.less'],
+				src: ['test/fixtures/*.less', 'test/fixtures/*.css', 'test/fixtures/deeper/*.less', 'test/fixtures/deeper/*.css'],
 				dest: 'tmp/inline_css_false/imports.less'
 			},
 			test_custom_banner: {

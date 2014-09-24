@@ -48,7 +48,7 @@ describe('grunt-less-imports', function() {
 			assert.equal(actual, expected);
 		});
 
-		it('should compile imports.less to css', function() {
+		it('should compile imports.less to css (don\'t inline CSS files)', function() {
 			var actual = grunt.file.read('tmp/compiled/inline_css_false.css');
 			var expected = grunt.file.read('test/expected/inline_css_false/output.css');
 			assert.equal(actual, expected);
