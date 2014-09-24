@@ -55,16 +55,28 @@ module.exports = function (grunt) {
 			},
 			test_custom_banner: {
 				options: {
-					banner: '// Auto-generated for <%= package.name %>'
+					banner: '// Banner for <%= package.name %>'
 				},
 				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
 				dest: 'tmp/test_custom_banner/imports.less'
+			},
+			import_option: {
+				options: {
+					import: 'reference'
+				},
+				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
+				dest: 'tmp/import_options/imports.less'
 			}
 		},
 
 		// Unit tests.
-		nodeunit: {
-			tests: ['test/*_test.js']
+		mochaTest: {
+			test: {
+				options: {
+					reporter: 'spec'
+				},
+				src: ['test/*.test.js']
+			}
 		},
 
 		less: {
@@ -85,11 +97,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-nodeunit');
+	grunt.loadNpmTasks('grunt-mocha-test');
 
 	// Whenever the "test" task is run, first clean the "tmp" dir, then run this
 	// plugin's task(s), then test the result.
-	grunt.registerTask('test', [/*'clean',*/ 'less_imports', 'less', 'nodeunit']);
+	grunt.registerTask('test', ['clean', 'less_imports', 'less', 'mochaTest']);
 
 	// By default, lint and run all tests.
 	grunt.registerTask('default', ['jshint', 'test']);
