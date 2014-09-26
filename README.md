@@ -76,7 +76,8 @@ In addition grunt-glue-nu has a few configuration options that are not passed on
 grunt.initConfig({
   less_imports: {
     options: {
-      inlineCSS: false // default: true
+      inlineCSS: false, // default: true
+      import: 'reference' // default: once
     },
     src: [ 'styles/*.css', 'styles/*.less'],
     dest: 'temp/imports.less'
@@ -118,6 +119,29 @@ grunt.initConfig({
 })
 ```
 
+#### Using multiple task targets
+
+```js
+grunt.initConfig({
+  less_imports: {
+    options: { // general task options
+      inlineCSS: false
+    },
+    project: {
+      src: [ 'styles/*.css', 'styles/*.less'],
+      dest: 'dist/project.less'
+  },
+    vendor: {
+      options: { // target-specific options
+        import: 'reference'
+      },
+      src: [ 'styles/vendor/*.css', 'styles/vendor/*.less'],
+      dest: 'dist/vendor.less'
+    }
+  }
+})
+```
+
 ## Troubleshooting
 
 	Warning: Arguments to path.join must be strings
@@ -126,7 +150,7 @@ Most likely caused by a change in Node 0.10.0. Fixed in Grunt 0.4.1.
 Update grunt and grunt-cli.
 
 ## Contributing
-[How to contribute to a project on Github](https://gist.github.com/MarcDiethelm/7303312)
+[How to contribute to a project on Github](https://github.com/MarcDiethelm/contributing/blob/master/README.md)
 
 ## Release History
 see [CHANGELOG.md](CHANGELOG.md)

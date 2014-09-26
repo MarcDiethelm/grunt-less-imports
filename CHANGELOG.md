@@ -1,7 +1,8 @@
-# 1.0.0 – 2014-06-xx
+# 1.0.0 – 2014-09-xx
 
 - Simple implementation of Less import options. Import keyword is applied to all @import statements in task target.
 - Dev: Test with Mocha instead of Nodeunit
+- No longer tested on Node.js 0.8.x. Because Node is unwilling to backport npm fixes.
 
 # 0.9.1 – 2014-01-18
 
