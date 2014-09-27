@@ -47,14 +47,14 @@ In your project's Gruntfile, add a section named `less_imports` to the data obje
 
 ```js
 grunt.initConfig({
-  less_imports: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    }
-  }
+	less_imports: {
+		options: {
+			// Task-specific options go here.
+		},
+		your_target: {
+			// Target-specific file lists and/or options go here.
+		}
+	}
 })
 ```
 
@@ -74,14 +74,14 @@ In addition grunt-glue-nu has a few configuration options that are not passed on
 
 ```js
 grunt.initConfig({
-  less_imports: {
-    options: {
-      inlineCSS: false, // default: true
-      import: 'reference' // default: once
-    },
-    src: [ 'styles/*.css', 'styles/*.less'],
-    dest: 'temp/imports.less'
-  }
+	less_imports: {
+		options: {
+			inlineCSS: false, // default: true
+			import: 'reference' // default: once
+		},
+		src: [ 'styles/*.css', 'styles/*.less'],
+		dest: 'temp/imports.less'
+	}
 })
 ```
 
@@ -94,13 +94,13 @@ In this example, `src` and `dest` properties are used to specify input files and
 
 ```js
 grunt.initConfig({
-  less_imports: {
-    options: {
-      inlineCSS: true
-    },
-    src: [ 'styles/*.css', 'styles/*.less'],
-    dest: 'dist/imports.less'
-  }
+	less_imports: {
+		options: {
+			inlineCSS: true
+		},
+		src: [ 'styles/*.css', 'styles/*.less'],
+		dest: 'dist/imports.less'
+	}
 })
 ```
 
@@ -109,13 +109,13 @@ In this example, a `files` shorthand is used to specify input files and the outp
 
 ```js
 grunt.initConfig({
-  less_imports: {
-    options: {
-    },
-    files: {
-      'dist/imports.less': ['styles/styles.css', 'styles/styles.less']
-    }
-  }
+	less_imports: {
+		options: {
+		},
+		files: {
+			'dist/imports.less': ['styles/styles.css', 'styles/styles.less']
+		}
+	}
 })
 ```
 
@@ -123,22 +123,22 @@ grunt.initConfig({
 
 ```js
 grunt.initConfig({
-  less_imports: {
-    options: { // general task options
-      inlineCSS: false
-    },
-    project: {
-      src: [ 'styles/*.css', 'styles/*.less'],
-      dest: 'dist/project.less'
-  },
-    vendor: {
-      options: { // target-specific options
-        import: 'reference'
-      },
-      src: [ 'styles/vendor/*.css', 'styles/vendor/*.less'],
-      dest: 'dist/vendor.less'
-    }
-  }
+	less_imports: {
+		options: { // general task options
+			inlineCSS: false
+		},
+		project: {
+			src: [ 'styles/*.css', 'styles/*.less'],
+			dest: 'dist/project.less'
+		},
+		vendor: {
+			options: { // target-specific options
+				import: 'reference'
+			},
+			src: [ 'styles/vendor/*.css', 'styles/vendor/*.less'],
+			dest: 'dist/vendor.less'
+		}
+	}
 })
 ```
 

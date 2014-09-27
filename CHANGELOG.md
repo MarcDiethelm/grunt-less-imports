@@ -1,7 +1,7 @@
 # 1.0.0 – 2014-09-27
 
 - Handle `files` option with multiple entries correctly. [thanks panta82!]
-- Simple implementation of Less import options. Import keyword is applied to all @import statements in task target.
+- Simple implementation of [Less import options](https://github.com/MarcDiethelm/grunt-less-imports#options). Import keyword is applied to all `@import` statements in task target.
 - No longer tested on Node.js 0.8.x. Because Node is unwilling to backport npm fixes.
 - Dev: Test with Mocha instead of Nodeunit
 
