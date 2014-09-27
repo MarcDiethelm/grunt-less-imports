@@ -28,21 +28,20 @@ module.exports = function(grunt) {
 		// Iterate over all specified file groups.
 		this.files.forEach(function(f) {
 
-			var css = '',
-				lessImports = '',
-				dest = f.dest,
-				relRoot = path.dirname(dest),
-				resolved;
+			var css = '';
+			var lessImports = '';
+			var dest = f.dest;
+			var relRoot = path.dirname(dest);
+			var resolved;
+			var i = 0;
+			var filepath;
+			var extension;
 
-			// Process sources
-			f.src.forEach(processSrc);
+			// Process sources "f.src.forEach";
+			
+			for (; i < f.src.length; i++) {
+				filepath = f.src[i];
 
-			// Write the destination file.
-			grunt.file.write(dest, banner + css + lessImports);
-			grunt.log.writeln('File "' + f.dest.cyan + '" created.');
-
-			function processSrc(filepath) {
-				var extension;
 				// Warn on and ignore invalid source files (e.g. if nonull was set).
 				if (!grunt.file.exists(filepath)) {
 					grunt.log.warn('Source file "' + filepath + '" not found.');
@@ -59,6 +58,10 @@ module.exports = function(grunt) {
 					}
 				}
 			}
+
+			// Write the destination file.
+			grunt.file.write(dest, banner + css + lessImports);
+			grunt.log.writeln('File "' + f.dest.cyan + '" created.');
 		});
 	});
 };
