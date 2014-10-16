@@ -21,7 +21,7 @@ So, automate @import creation with this plugin and use the resulting file as the
 By default any .css source files are inlined in the output before the @import statements for the less files start.
 
 ## Getting Started
-This plugin requires Grunt `~0.4.1`
+This plugin requires Grunt `^0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the
 [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a
