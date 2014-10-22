@@ -47,6 +47,12 @@ describe('grunt-less-imports', function() {
 			assert.equal(actual, expected);
 		});
 
+		it('should set import function from options', function() {
+			var actual = grunt.file.read('tmp/import_function_options/imports.less');
+			var expected = grunt.file.read('test/expected/import_function_options/imports.less');
+			assert.equal(actual, expected);
+		});
+
 	});
 
 	describe('Compilation of generated imports file', function() {

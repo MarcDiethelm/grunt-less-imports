@@ -74,6 +74,18 @@ module.exports = function (grunt) {
 				},
 				src: ['test/fixtures/*.less', 'test/fixtures/*.css'],
 				dest: 'tmp/import_options/imports.less'
+			},
+			import_function_option: {
+				options: {
+					import: function(filepath) {
+						if (filepath === 'test/fixtures/styles.less') {
+							return 'reference';
+						}
+					}
+				},
+				files: {
+					'tmp/import_function_options/imports.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css', 'test/fixtures/deeper/*.less'],
+				}
 			}
 		},
 
