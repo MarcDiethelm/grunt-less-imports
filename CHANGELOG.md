@@ -1,3 +1,7 @@
+# 1.1.0 – xxxx-yy-zz
+
+- `options.import` accepts a function for dynamic setting of imports keyword. [thanks gymlish!]
+
 # 1.0.0 – 2014-09-27
 
 - Handle `files` option with multiple entries correctly. [thanks panta82!]
