@@ -47,9 +47,9 @@ describe('grunt-less-imports', function() {
 			assert.equal(actual, expected);
 		});
 
-		it('should set import function from options', function() {
-			var actual = grunt.file.read('tmp/import_function_options/imports.less');
-			var expected = grunt.file.read('test/expected/import_function_options/imports.less');
+		it('should set import keyword from options using callback', function() {
+			var actual = grunt.file.read('tmp/import_options_callback/imports.less');
+			var expected = grunt.file.read('test/expected/import_options_callback/imports.less');
 			assert.equal(actual, expected);
 		});
 

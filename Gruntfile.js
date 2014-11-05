@@ -77,14 +77,15 @@ module.exports = function (grunt) {
 			},
 			import_function_option: {
 				options: {
-					import: function(filepath) {
+					import: function(filepath, extension) {
 						if (filepath === 'test/fixtures/styles.less') {
 							return 'reference';
 						}
+						else return 'once';
 					}
 				},
 				files: {
-					'tmp/import_function_options/imports.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css', 'test/fixtures/deeper/*.less'],
+					'tmp/import_options_callback/imports.less': ['test/fixtures/styles.less', 'test/fixtures/styles.css', 'test/fixtures/deeper/*.less']
 				}
 			}
 		},
