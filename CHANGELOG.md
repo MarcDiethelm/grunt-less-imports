@@ -1,6 +1,6 @@
-# 1.1.0 – xxxx-yy-zz
+# 1.1.0 – 2014-11-06
 
-- `options.import` accepts a function for dynamic setting of imports keyword. [thanks gymlish!]
+- `options.import` accepts a function for dynamic setting of imports keyword. [thanks gymglish!]
 
 # 1.0.0 – 2014-09-27
 
