@@ -10,6 +10,7 @@
 
 var path = require('path');
 var util = require('util');
+var slash = require('slash');
 
 module.exports = function(grunt) {
 	// Please see the Grunt documentation for more information regarding task
@@ -33,6 +34,7 @@ module.exports = function(grunt) {
 			var dest = f.dest;
 			var relRoot = path.dirname(dest);
 			var resolved;
+			var slashed;
 			var i = 0;
 			var filepath;
 			var extension;
@@ -58,7 +60,8 @@ module.exports = function(grunt) {
 					}
 					else {
 						resolved = path.relative(relRoot, filepath);
-						grunt.log.debug(resolved.green + ' @import created'.magenta);
+						slashed = slash(resolved);
+						grunt.log.debug(slashed.green + ' @import created'.magenta);
 
 						if ('function' === typeof options.import) {
 							importStr = options.import(filepath, extension);
@@ -66,7 +69,7 @@ module.exports = function(grunt) {
 								errorImportCallback(filepath, extension);
 							}
 						}
-						lessImports += util.format('@import (%s) "%s";\n', importStr, resolved);
+						lessImports += util.format('@import (%s) "%s";\n', importStr, slashed);
 					}
 				}
 			}
