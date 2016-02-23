@@ -1,4 +1,4 @@
-[![Build status (master)](https://img.shields.io/travis/MarcDiethelm/grunt-less-imports/master.svg)](https://travis-ci.org/MarcDiethelm/grunt-less-imports) &nbsp; ![npm version](https://img.shields.io/npm/v/grunt-less-imports.svg) 
+[![Build status](https://img.shields.io/travis/MarcDiethelm/grunt-less-imports.svg)](https://travis-ci.org/MarcDiethelm/grunt-less-imports) &nbsp; ![npm version](https://img.shields.io/npm/v/grunt-less-imports.svg) 
 
 ---
 
