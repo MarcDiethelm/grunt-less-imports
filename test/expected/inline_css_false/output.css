@@ -1,8 +1,8 @@
 @import "../../test/fixtures/styles.css";
 @import "../../test/fixtures/deeper/styles.css";
 body {
-  color: #008000;
+  color: green;
 }
 body {
-  color: #ff00ff;
+  color: fuchsia;
 }

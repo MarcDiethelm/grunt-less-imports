@@ -10,6 +10,7 @@
 
 var path = require('path');
 var util = require('util');
+var errorImportCallback;
 
 module.exports = function(grunt) {
 	// Please see the Grunt documentation for more information regarding task
@@ -77,12 +78,12 @@ module.exports = function(grunt) {
 		});
 	});
 
-	function errorImportCallback(filepath, extension, importFunc) {
+	errorImportCallback = function errorImportCallback(filepath, extension, importFunc) {
 		var error = grunt.util.error(util.format(
 			'options.import callback given, but no string returned.\n' +
 			'Arguments passed: ["%s", "%s"].', filepath, extension)
 		);
 		grunt.fail.warn(error);
-	}
-};
+	};
 
+};
