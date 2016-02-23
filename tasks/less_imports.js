@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 						css += grunt.file.read(filepath) + '\n\n';
 					}
 					else {
-						resolved = path.relative(relRoot, filepath);
+						resolved = path.posix.relative(relRoot, filepath);
 						grunt.log.debug(resolved.green + ' @import created'.magenta);
 
 						if ('function' === typeof options.import) {
