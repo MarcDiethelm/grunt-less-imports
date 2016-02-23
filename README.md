@@ -1,4 +1,4 @@
-[![Build status](https://img.shields.io/travis/MarcDiethelm/grunt-less-imports.svg)](https://travis-ci.org/MarcDiethelm/grunt-less-imports) &nbsp; ![npm version](https://img.shields.io/npm/v/grunt-less-imports.svg) &nbsp; ![npm version](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Build status](https://img.shields.io/travis/MarcDiethelm/grunt-less-imports.svg)](https://travis-ci.org/MarcDiethelm/grunt-less-imports) &nbsp; ![npm version](https://img.shields.io/npm/v/grunt-less-imports.svg) &nbsp; ![npm version](https://img.shields.io/badge/license-MIT-blue.svg) &nbsp; ![37KB installed size](https://img.shields.io/badge/installed%20size-37KB-brightgreen.svg)
 
 ---
 
@@ -168,6 +168,11 @@ grunt less_imports:target-name --debug --verbose
 Debug will make grunt-less-imports print out more info, and verbose is used by grunt to be, well, really quite verbose.
 
 ## Contributing
+
+- Clone the project from https://github.com/MarcDiethelm/grunt-less-imports.git
+- `npm install` (no global dependencies required)
+- `npm test`
+
 [How to contribute to a project on Github](https://github.com/MarcDiethelm/contributing/blob/master/README.md)
 
 ## Release History
