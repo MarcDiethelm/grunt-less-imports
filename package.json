@@ -26,7 +26,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "npm run grunt",
+    "test": "npm run grunt --silent",
     "grunt": "grunt"
   },
   "devDependencies": {
