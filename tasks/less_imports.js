@@ -2,7 +2,7 @@
  * grunt-less-imports
  * https://github.com/MarcDiethelm/grunt-less-imports
  *
- * Copyright (c) 2013 Marc Diethelm
+ * Copyright (c) 2013-2016 Marc Diethelm
  * Licensed under the MIT license.
  */
 
