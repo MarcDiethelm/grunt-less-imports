@@ -1,4 +1,4 @@
-[![Build status (master)](http://b.adge.me/travis/MarcDiethelm/grunt-less-imports.svg)](https://travis-ci.org/MarcDiethelm/grunt-less-imports) &nbsp; ![npm version](http://b.adge.me/npm/v/grunt-less-imports.svg) &nbsp; [![gittip donate](http://b.adge.me/:gittip-donate-lightgrey.svg)](https://www.gittip.com/MarcDiethelm/) &nbsp; [![bitcoin donations to 19emVu3kNQKZWZsG916MwbkyJh7Fci7WER](http://b.adge.me/:bitcoin-donate-lightgrey.svg)](bitcoin:19emVu3kNQKZWZsG916MwbkyJh7Fci7WER)
+[![Build status (master)](https://img.shields.io/travis/MarcDiethelm/grunt-less-imports/master.svg)](https://travis-ci.org/MarcDiethelm/grunt-less-imports) &nbsp; ![npm version](https://img.shields.io/npm/v/grunt-less-imports.svg) 
 
 ---
 
