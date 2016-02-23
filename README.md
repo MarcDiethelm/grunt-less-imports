@@ -153,10 +153,19 @@ grunt.initConfig({
 
 ## Troubleshooting
 
-	Warning: Arguments to path.join must be strings
+Run the task with the debug and verbose options. This will give you a lot of info about what's going on.
 
-Most likely caused by a change in Node 0.10.0. Fixed in Grunt 0.4.1.
-Update grunt and grunt-cli.
+```bash
+grunt less_imports --debug --verbose
+```
+
+To just run a specific task target
+
+```bash
+grunt less_imports:target-name --debug --verbose
+```
+
+Debug will make grunt-less-imports print out more info, and verbose is used by grunt to be, well, really quite verbose.
 
 ## Contributing
 [How to contribute to a project on Github](https://github.com/MarcDiethelm/contributing/blob/master/README.md)
