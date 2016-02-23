@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-  - "0.10"
-before_install:
-  - npm update -g npm
-before_script:
-  - npm install -g grunt-cli
+  - "1.12"
+  - "4.3"
+  - "5.7"
+
