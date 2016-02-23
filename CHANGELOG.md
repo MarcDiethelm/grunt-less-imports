@@ -1,3 +1,9 @@
+# 1.2.1 – 2016-02-23
+
+- Smaller distro, improved docs
+- Fixed test build
+- No global dependencies for contributors
+
 # 1.2.0 – 2016-02-23
 
 - Fixes import URIs on Windows by using Node's' `path.posix.relative`, thus preventing the use of backslashes.
