@@ -1,3 +1,9 @@
+# 1.2.0 – 2016-02-23
+
+- Fixes import URIs on Windows by using Node's' `path.posix.relative`, thus preventing the use of backslashes.
+- Updates devDependencies
+
+
 # 1.1.0 – 2014-11-06
 
 - `options.import` accepts a function for dynamic setting of imports keyword. [thanks gymglish!]
