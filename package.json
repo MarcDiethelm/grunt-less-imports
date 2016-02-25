@@ -1,7 +1,7 @@
 {
   "name": "grunt-less-imports",
   "description": "A grunt task to create LessCSS @import statements from a collection of stylesheet files",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "homepage": "https://github.com/MarcDiethelm/grunt-less-imports",
   "author": {
     "name": "Marc Diethelm",

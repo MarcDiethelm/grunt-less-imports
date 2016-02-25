@@ -7,7 +7,7 @@
 A grunt task to create LessCSS @import statements from a collection of stylesheet files.
 
 ```less
-@import (once) "filename"; // <-- these. in a file.
+@import (once) "filename"; // <-- these. in a file. automatically.
 ```
 
 Why use this? To get useful error messages from the LessCSS parser, that tell you in what file the error was encountered!
@@ -18,10 +18,12 @@ information about where to fix your mistakes.
 
 So, automate @import creation with this plugin and use the resulting file as the source for the LessCSS parser.
 
-By default any .css source files are inlined in the output before the @import statements for the less files start.
+By default any .css source files are inlined in the generated file before the @import statements.
 
 ## Getting Started
-This plugin requires Grunt `^0.4.5`
+This plugin requires Grunt `^0.4.5`.
+
+Alternatively [grunty](https://github.com/bahmutov/grunty) allows to any grunt plugin as NPM script without Gruntfile.js
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the
 [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a
