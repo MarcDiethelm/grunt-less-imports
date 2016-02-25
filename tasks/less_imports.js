@@ -10,6 +10,7 @@
 
 var path = require('path');
 var util = require('util');
+var slash = require('slash');
 var errorImportCallback;
 
 module.exports = function(grunt) {
@@ -34,6 +35,7 @@ module.exports = function(grunt) {
 			var dest = f.dest;
 			var relRoot = path.dirname(dest);
 			var resolved;
+			var slashed;
 			var i = 0;
 			var filepath;
 			var extension;
@@ -58,8 +60,9 @@ module.exports = function(grunt) {
 						css += grunt.file.read(filepath) + '\n\n';
 					}
 					else {
-						resolved = path.posix.relative(relRoot, filepath);
-						grunt.log.debug(resolved.green + ' @import created'.magenta);
+						resolved = path.relative(relRoot, filepath);
+						slashed = slash(resolved);
+						grunt.log.debug(slashed.green + ' @import created'.magenta);
 
 						if ('function' === typeof options.import) {
 							importStr = options.import(filepath, extension);
@@ -67,7 +70,7 @@ module.exports = function(grunt) {
 								errorImportCallback(filepath, extension);
 							}
 						}
-						lessImports += util.format('@import (%s) "%s";\n', importStr, resolved);
+						lessImports += util.format('@import (%s) "%s";\n', importStr, slashed);
 					}
 				}
 			}
