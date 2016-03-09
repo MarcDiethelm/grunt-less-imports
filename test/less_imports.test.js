@@ -29,6 +29,12 @@ describe('grunt-less-imports', function() {
 			assert.equal(actual2, expected2);
 		});
 
+		it('should exclude dest file from imports', function() {
+			var actual = grunt.file.read('tmp/exclude_dest/less-imports.less');
+			var expected = grunt.file.read('test/expected/exclude-dest/exclude-dest.less');
+			assert.equal(actual, expected);
+		});
+
 		it('should create a correct imports.less with inlineCSS==false', function() {
 			var actual = grunt.file.read('tmp/inline_css_false/imports.less');
 			var expected = grunt.file.read('test/expected/inline_css_false/imports.less');

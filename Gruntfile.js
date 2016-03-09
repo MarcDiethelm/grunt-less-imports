@@ -54,6 +54,20 @@ module.exports = function (grunt) {
 					'tmp/test_more_files/deeper.less': ['test/fixtures/deeper/styles.less', 'test/fixtures/deeper/styles.css']
 				}
 			},
+			createExcludeDest: {
+				options: {
+				},
+				files: {
+					'tmp/exclude_dest/less-imports.less': []
+				}
+			},
+			testExcludeDest: {
+				options: {
+				},
+				files: {
+					'tmp/exclude_dest/less-imports.less': ['tmp/exclude_dest/less-imports.less']
+				}
+			},
 			inline_css_false: {
 				options: {
 					inlineCSS: false

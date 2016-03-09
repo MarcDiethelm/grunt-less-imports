@@ -50,6 +50,9 @@ module.exports = function(grunt) {
 			for (; i < f.src.length; i++) {
 				filepath = f.src[i];
 
+				// prevent inclusion of dest file in import statements
+				if (dest === filepath) { break; }
+
 				// Warn on and ignore invalid source files (e.g. if nonull was set).
 				if (!grunt.file.exists(filepath)) {
 					grunt.log.warn('Source file "' + filepath + '" not found.');

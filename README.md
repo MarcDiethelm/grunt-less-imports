@@ -60,6 +60,8 @@ grunt.initConfig({
 })
 ```
 
+The destination file name is automatically skipped should it accidentally be included with the source pattern.
+
 ### Options
 
 - **options.inlineCSS** `{Boolean} true`  

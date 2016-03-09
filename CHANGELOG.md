@@ -1,3 +1,7 @@
+# 1.3.0 – 2016-03-09
+
+- Automatically skip destination file name, should it accidentally be included with source pattern.
+
 # 1.2.2 – 2016-02-25
 
 - Removes my previous fix for import paths on Windows using `path.posix`, which is not supported in Node 0.10.x
